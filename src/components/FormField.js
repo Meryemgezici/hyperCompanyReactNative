@@ -8,11 +8,12 @@ import {
 } from "react-native";
 import { useDispatch } from "react-redux";
 import { resetAllColors } from "../redux/slices/menuSlice";
+import { useNavigation } from '@react-navigation/native';
 
 const FormField = ({ store }) => {
   const [inputs, setInputs] = useState(["", "", "", ""]);
   const dispatch = useDispatch();
-
+  const navigation = useNavigation();
   const handleInputChange = (text, index) => {
     const newInputs = [...inputs];
     newInputs[index] = text;
@@ -25,7 +26,7 @@ const FormField = ({ store }) => {
   };
 
   const handleSubmit = () => {
-    console.log("Input Values:", inputs);
+    navigation.navigate('Detail');
   };
 
   const isFormValid = inputs.every((input) => input !== "");
