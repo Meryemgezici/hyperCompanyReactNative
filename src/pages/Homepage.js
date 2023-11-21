@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
+    backgroundColor:"#F4A261",
   },
 });
 export default Homepage;

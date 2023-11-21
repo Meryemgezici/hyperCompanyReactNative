@@ -4,11 +4,11 @@ import Icon from "react-native-vector-icons/FontAwesome";
 
 const Header = ({ title, openSidebar, store }) => {
   let backgroundColor = "#264653";
-
+  // Aktif olan menu item rengini al
   if (store.selectedIndex !== null && store.menu[store.selectedIndex]) {
     backgroundColor = store.menu[store.selectedIndex].color;
   }
-
+  // Resete basılınca rengi resetle
   if (store.resetColor) {
     backgroundColor = "#264653";
   }

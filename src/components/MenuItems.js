@@ -13,7 +13,7 @@ import {
 const MenuItems = () => {
   const dispatch = useDispatch();
   const store = useSelector((store) => store);
-
+  // aktif olan item değerini true yap diğerlerini false
   const handleClick = (id) => {
     dispatch(selectedItem(id));
   };

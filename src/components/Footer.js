@@ -3,11 +3,11 @@ import { View, Text, StyleSheet } from "react-native";
 
 const Footer = ({ store }) => {
   let backgroundColor = "#2a9d8f";
-
+  // Aktif olan menu item rengini al
   if (store.selectedIndex !== null && store.menu[store.selectedIndex]) {
     backgroundColor = store.menu[store.selectedIndex].color;
   }
-
+  // Resete basılınca rengi resetle
   if (store.resetColor) {
     backgroundColor = "#2a9d8f";
   }
